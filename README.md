@@ -6,7 +6,7 @@
 
 ### Intercept GPT-4o / Claude Sonnet / Gemini — Every AI Action, Your Approval First
 
-**Copilot Free 即可免费使用 GPT-4o / Claude Sonnet / Gemini 前沿御三家模型<br>本扩展让你掌控与它们的每一次交互——审阅、修改、重定向，一个不漏。**
+**Copilot Free 即可无限免费使用 GPT / Claude opus / Gemini 前沿御三家模型<br>本扩展让你掌控与它们的每一次交互——审阅、修改、重定向，一个不漏。**
 
 **Frontier models (GPT-4o · Claude Sonnet · Gemini) are free via Copilot Free tier.<br>This extension gives you full control over every single interaction with them.**
 
