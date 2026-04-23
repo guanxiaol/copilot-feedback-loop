@@ -6,8 +6,9 @@
 
 ### Intercept GPT-4o / Claude Sonnet / Gemini — Every AI Action, Your Approval First
 
-**一个 VS Code 扩展，让 Copilot 背后的前沿大模型完全听你指挥。**<br>
-**One extension to make frontier models behind Copilot do exactly what you say.**
+**Copilot Free 即可免费使用 GPT-4o / Claude Sonnet / Gemini 前沿御三家模型<br>本扩展让你掌控与它们的每一次交互——审阅、修改、重定向，一个不漏。**
+
+**Frontier models (GPT-4o · Claude Sonnet · Gemini) are free via Copilot Free tier.<br>This extension gives you full control over every single interaction with them.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![VS Code](https://img.shields.io/badge/VS%20Code-%E2%89%A5%201.99-blue.svg)](https://code.visualstudio.com/)
