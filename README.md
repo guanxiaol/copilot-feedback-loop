@@ -1,10 +1,13 @@
 <div align="center">
 
-# Feedback Loop MCP
+# Copilot Feedback Loop
 
-### Human-in-the-Loop Control for GitHub Copilot Chat Agent
+### 拦截 GPT-4o / Claude Sonnet / Gemini — 让每一个 AI 动作都先过你这关
 
-**GPT-4o, Claude Sonnet, Gemini — whatever model Copilot throws at your code,<br>make sure _you_ approve every action before it happens.**
+### Intercept GPT-4o / Claude Sonnet / Gemini — Every AI Action, Your Approval First
+
+**一个 VS Code 扩展，让 Copilot 背后的前沿大模型完全听你指挥。**<br>
+**One extension to make frontier models behind Copilot do exactly what you say.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![VS Code](https://img.shields.io/badge/VS%20Code-%E2%89%A5%201.99-blue.svg)](https://code.visualstudio.com/)
