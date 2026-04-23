@@ -1,0 +1,63 @@
+{
+  "name": "feedback-loop-mcp",
+  "displayName": "Feedback Loop · MCP 交互反馈",
+  "description": "在 VS Code Copilot Chat 每次回复前强制进行人工确认反馈的本地 MCP 扩展。",
+  "version": "0.1.2",
+  "publisher": "local",
+  "license": "MIT",
+  "engines": { "vscode": "^1.99.0" },
+  "categories": ["AI", "Chat"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        { "id": "feedback-loop-sidebar", "title": "反馈回路 MCP", "icon": "media/icon.svg" }
+      ]
+    },
+    "views": {
+      "feedback-loop-sidebar": [
+        { "type": "webview", "id": "feedback-loop.dashboard", "name": "控制台" }
+      ]
+    },
+    "commands": [
+      { "command": "feedback-loop.openPanel",      "title": "反馈回路：打开反馈面板" },
+      { "command": "feedback-loop.restart",        "title": "反馈回路：重启 MCP 服务" },
+      { "command": "feedback-loop.toggle",         "title": "反馈回路：启用 / 停用拦截器" },
+      { "command": "feedback-loop.resetMcpConfig", "title": "反馈回路：重置统计数据" }
+    ],
+    "mcpServerDefinitionProviders": [
+      { "id": "feedback-loop-mcp-provider", "label": "反馈回路 MCP" }
+    ],
+    "configuration": {
+      "title": "反馈回路 MCP",
+      "properties": {
+        "feedback-loop.autoOpenPanel":   { "type": "boolean", "default": true,  "description": "收到反馈请求时自动打开反馈面板" },
+        "feedback-loop.maximizePanel":   { "type": "boolean", "default": true,  "description": "反馈面板打开时自动最大化编辑器组" },
+        "feedback-loop.flashTaskbar":    { "type": "boolean", "default": true,  "description": "收到新反馈请求时把窗口带到前台" },
+        "feedback-loop.ctrlEnterSend":   { "type": "boolean", "default": true,  "description": "勾选后使用 Ctrl+Enter 发送；取消勾选则 Enter 直接发送" },
+        "feedback-loop.soundEnabled":    { "type": "boolean", "default": true,  "description": "收到反馈请求时播放提示音" },
+        "feedback-loop.soundType":       {
+          "type": "string", "default": "chime",
+          "enum": ["triple", "chime", "ping", "urgent", "none"],
+          "enumDescriptions": ["三连音", "和弦提示音（默认）", "简短提示音", "紧急连续音", "无声"],
+          "description": "提示音类型"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "node esbuild.mjs",
+    "watch": "node esbuild.mjs --watch",
+    "package": "vsce package --out feedback-loop-mcp.vsix"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.99.0",
+    "@vscode/vsce": "^3.7.1",
+    "esbuild": "^0.25.0",
+    "typescript": "^5.7.0",
+    "zod": "^3.24.0"
+  }
+}
