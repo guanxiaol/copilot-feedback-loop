@@ -4,13 +4,15 @@
 
 ### Human-in-the-Loop Control for GitHub Copilot Chat Agent
 
-**Review every AI response _before_ it happens. Not after.**
+**GPT-4o, Claude Sonnet, Gemini — whatever model Copilot throws at your code,<br>make sure _you_ approve every action before it happens.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![VS Code](https://img.shields.io/badge/VS%20Code-%E2%89%A5%201.99-blue.svg)](https://code.visualstudio.com/)
 [![MCP](https://img.shields.io/badge/Protocol-MCP%20(Model%20Context%20Protocol)-purple.svg)](https://modelcontextprotocol.io/)
+[![Models](https://img.shields.io/badge/Models-GPT--4o%20%7C%20Claude%20%7C%20Gemini-orange.svg)](#architecture)
+[![AI Safety](https://img.shields.io/badge/AI%20Safety-Human--in--the--Loop-red.svg)](#what-is-this)
 
-[English](#-what-is-this) | [中文](#-这是什么)
+[English](#what-is-this) | [中文](#这是什么)
 
 </div>
 
@@ -18,11 +20,17 @@
 
 ## What is This?
 
-In VS Code's Copilot Chat **Agent mode**, the AI autonomously reads/writes files, runs terminal commands, and makes decisions — often before you even realize what happened.
+In VS Code's Copilot Chat **Agent mode**, frontier models like **GPT-4o**, **Claude Sonnet**, and **Gemini** autonomously read/write your files, run terminal commands, and make decisions — often before you even realize what happened.
 
 **Feedback Loop MCP** injects a human checkpoint into the Agent's reasoning loop. Before every response, the Agent is **forced to pause**, display its full intended reply in a dedicated panel, and **wait for your approval, edits, or redirection**.
 
 > Think of it as a **pull request review — but for every single AI action**, in real-time.
+
+### Why You Need This
+
+- **Copilot Agent is powerful but uncontrollable** — it can mass-edit files, run `rm -rf`, or refactor your entire codebase in one go. One hallucination = hours of cleanup.
+- **You're paying for frontier models** (GPT-4o / Claude / Gemini) through your Copilot subscription — this tool ensures you actually **direct** how they work on your code, not just watch.
+- **MCP is the new standard** — this is a production-ready reference implementation of the [Model Context Protocol](https://modelcontextprotocol.io/) for VS Code, with full source code and a [921-line architecture doc](docs/ARCHITECTURE.md).
 
 ### How It Works (30-second version)
 
@@ -196,11 +204,17 @@ This project is published for **technical research and educational purposes only
 
 ## 这是什么？
 
-VS Code 1.99+ 的 Copilot Chat Agent 模式下，AI 会自主读写文件、执行终端命令——大多数时候你只能**事后**审查结果。
+VS Code 1.99+ 的 Copilot Chat Agent 模式下，**GPT-4o**、**Claude Sonnet**、**Gemini** 等前沿模型会自主读写你的文件、执行终端命令——大多数时候你只能**事后**审查结果。
 
 **Feedback Loop MCP** 在 Agent 的推理循环中插入了一个「人类关卡」：Agent 每次准备回复时，必须先调用 `interactive_feedback` 工具，把即将发出的完整回复展示在 Webview 面板中，等你审阅、修改或补充后才继续。
 
 > 你可以把它理解为：**对 AI 每一步操作的实时 Code Review。**
+
+### 为什么你需要它
+
+- **Copilot Agent 强大但不可控** — 它能批量改文件、跑 `rm -rf`、一口气重构整个代码库。一次幻觉 = 几小时返工。
+- **你在为前沿模型付费**（GPT-4o / Claude / Gemini 都在 Copilot 订阅里）— 这个工具确保你真正**指挥**它们干活，而不是干看着。
+- **MCP 是新一代标准** — 这是 [Model Context Protocol](https://modelcontextprotocol.io/) 在 VS Code 上的生产级参考实现，附完整源码和 [921 行架构深度文档](docs/ARCHITECTURE.md)，是学习 MCP 协议的最佳起点。
 
 ### 原理（30 秒版）
 
