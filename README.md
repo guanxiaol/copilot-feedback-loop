@@ -2,9 +2,9 @@
 
 # Copilot Feedback Loop
 
-### 拦截 GPT-4o / Claude Sonnet / Gemini — 让每一个 AI 动作都先过你这关
+### 拦截 GPT / Claude opus / Gemini — 让每一个 AI 动作都先过你这关
 
-### Intercept GPT-4o / Claude Sonnet / Gemini — Every AI Action, Your Approval First
+### Intercept GPT / Claude opus / Gemini — Every AI Action, Your Approval First
 
 **Copilot Free 即可无限免费使用 GPT / Claude opus / Gemini 前沿御三家模型<br>本扩展让你掌控与它们的每一次交互——审阅、修改、重定向，一个不漏。**
 
